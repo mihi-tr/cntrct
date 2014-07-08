@@ -1,0 +1,13 @@
+Django==1.6.1
+dj-database-url==0.3.0
+dj-static==0.0.5
+gunicorn==18.0
+static==0.4
+wsgiref==0.1.2
+South==0.8.4
+markdown
+pillow
+git+https://github.com/divio/django-cms.git@645a556cd3e28ee80d69a50ae84335187691e21d
+git+https://github.com/divio/djangocms-text-ckeditor.git
+djangocms-admin-style
+django-reversion
