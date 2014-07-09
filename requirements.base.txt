@@ -12,3 +12,4 @@ git+https://github.com/divio/django-cms.git@e6f8f9bf533657159cfbbe2b87ad91895f1d
 git+https://github.com/divio/djangocms-text-ckeditor.git
 djangocms-admin-style
 django-reversion
+git+https://github.com/mihi-tr/changeorg.git

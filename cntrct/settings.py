@@ -133,3 +133,5 @@ CMS_TEMPLATES = (
     ('frontpage.html', 'Frontpage'),
 )
 
+CHANGEORG_API_KEY=os.environ.get('CHANGEORG_API_KEY','')
+CHANGEORG_API_SECRET=os.environ.get('CHANGEORG_API_SECRET','')
