@@ -1,0 +1,15 @@
+{% extends "with-footer.html" %}
+{% load cms_tags %}
+
+{% block base_content %} 
+<div id="content" class="clearfix row">
+<div id="main" class="col-sm-8 clearfix" role="main">
+<article class="page" role="article" >
+{% placeholder main_content %}
+</article>
+</div>
+<div id="sidebar1" class="col-sm-4" role="complementary">
+{% static_placeholder "sidebar" %}
+</div>
+</div>
+{% endblock %}
