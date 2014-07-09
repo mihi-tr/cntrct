@@ -3,13 +3,14 @@ from django.conf import settings
 from django.views.decorators.clickjacking import xframe_options_exempt
 import changeorg
 
-from campains.models import Campain
+from campaigns.models import Campaign
 
 
 # Create your views here.
 
 @xframe_options_exempt
-def campaings_widget(request):
+def campaigns_widget(request):
+    campai
     pass
 
 @xframe_options_exempt

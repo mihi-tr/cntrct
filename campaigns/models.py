@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Campain(models.Model):
+class Campaign(models.Model):
     change_id = models.IntegerField(blank=True, null=True)
     title = models.CharField(max_length=512)
     url = models.URLField(unique=True)
