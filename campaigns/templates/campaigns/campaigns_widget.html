@@ -1,0 +1,48 @@
+{% extends "iframe.html" %}
+{% load sekizai_tags %}
+{% block "content" %}
+{% addtoblock "css" %}
+<style>
+.image {
+    height: 250px;
+    }
+.image h3 {
+    padding-top: 5px;
+    background: rgba(255,255,255,0.7);
+    }
+.overview {
+    height: 250px;
+    overflow: hidden;
+    }
+a.btn {
+    color: white !important;
+    }
+</style>
+{% endaddtoblock %}
+<div class="container">
+<h2>Support our Campaigns!</h2>
+<div class="campaigns row">
+{% for c in campaigns %}
+<div class="col-md-4">
+<div class="image" style="background: url({{c.image_url}})">
+<h3>{{c.title}}</h3>
+</div>
+<div class="overview">{{c.overview|safe}}</div>
+<a class="btn" href="{{c.url}}" target="_new">Sign Now!</a>
+<span>
+{{c.signature_count}} supporters.
+</span>
+</div>
+{% endfor %}
+</div>
+<ul class="pager">
+  <li class="previous {% if not campaigns.has_previous%} disabled {% endif %}">
+    <a {% if campaigns.has_previous %} href="?page={{campaigns.previous_page_number}}"
+        {% endif %}>&larr; previous</a></li>
+  <li class="next {% if not campaigns.has_next %} disabled {% endif %}">
+    <a {% if campaigns.has_next %}
+        href="?page={{campaigns.next_page_number}}"
+        {% endif %}>Next &rarr;</a></li>
+</ul>
+</div>
+{% endblock %}

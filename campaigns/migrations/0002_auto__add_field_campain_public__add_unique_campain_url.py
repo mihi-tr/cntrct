@@ -9,20 +9,20 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding field 'Campain.public'
-        db.add_column(u'campains_campain', 'public',
+        db.add_column(u'campaigns_campain', 'public',
                       self.gf('django.db.models.fields.BooleanField')(default=False),
                       keep_default=False)
 
         # Adding unique constraint on 'Campain', fields ['url']
-        db.create_unique(u'campains_campain', ['url'])
+        db.create_unique(u'campaigns_campain', ['url'])
 
 
     def backwards(self, orm):
         # Removing unique constraint on 'Campain', fields ['url']
-        db.delete_unique(u'campains_campain', ['url'])
+        db.delete_unique(u'campaigns_campain', ['url'])
 
         # Deleting field 'Campain.public'
-        db.delete_column(u'campains_campain', 'public')
+        db.delete_column(u'campaigns_campain', 'public')
 
 
     models = {
@@ -39,4 +39,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['campains']
+    complete_apps = ['campaigns']

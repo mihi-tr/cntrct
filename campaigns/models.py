@@ -10,3 +10,6 @@ class Campaign(models.Model):
     signature_count = models.IntegerField(default=0)
     image_url = models.URLField()
     public = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return self.title

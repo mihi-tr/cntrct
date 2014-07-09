@@ -9,10 +9,10 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Deleting model 'Campain'
-        db.delete_table(u'campains_campain')
+        db.delete_table(u'campaigns_campaign')
 
         # Adding model 'Campaign'
-        db.create_table(u'campains_campaign', (
+        db.create_table(u'campaigns_campaign', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('change_id', self.gf('django.db.models.fields.IntegerField')(null=True, blank=True)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=512)),
@@ -22,12 +22,12 @@ class Migration(SchemaMigration):
             ('image_url', self.gf('django.db.models.fields.URLField')(max_length=200)),
             ('public', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
-        db.send_create_signal(u'campains', ['Campaign'])
+        db.send_create_signal(u'campaigns', ['Campaign'])
 
 
     def backwards(self, orm):
         # Adding model 'Campain'
-        db.create_table(u'campains_campain', (
+        db.create_table(u'campaigns_campaign', (
             ('signature_count', self.gf('django.db.models.fields.IntegerField')(default=0)),
             ('image_url', self.gf('django.db.models.fields.URLField')(max_length=200)),
             ('overview', self.gf('django.db.models.fields.TextField')()),
@@ -37,14 +37,14 @@ class Migration(SchemaMigration):
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('public', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
-        db.send_create_signal(u'campains', ['Campain'])
+        db.send_create_signal(u'campaigns', ['Campain'])
 
         # Deleting model 'Campaign'
-        db.delete_table(u'campains_campaign')
+        db.delete_table(u'campaigns_campaign')
 
 
     models = {
-        u'campains.campaign': {
+        u'campaigns.campaign': {
             'Meta': {'object_name': 'Campaign'},
             'change_id': ('django.db.models.fields.IntegerField', [], {'null': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -57,4 +57,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['campains']
+    complete_apps = ['campaigns']

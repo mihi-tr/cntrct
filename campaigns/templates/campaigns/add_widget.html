@@ -1,0 +1,16 @@
+{% extends "iframe.html" %}
+
+{% block "content" %}
+<form action="../addfromurl/" method="POST">
+<h2>Add a Campaign on Change.org</h2>
+{% csrf_token %}
+{{urlform.as_p}}
+<input type="Submit" name="Submit" value="Submit">
+</form>
+<form action="" method="POST">
+<h2>Add another Campaign</h2>
+{% csrf_token %}
+{{form.as_p}}
+<input type="Submit" name="Submit" value="Submit">
+</form>
+{% endblock %}

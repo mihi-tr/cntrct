@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'Campain'
-        db.create_table(u'campains_campain', (
+        db.create_table(u'campaigns_campain', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('change_id', self.gf('django.db.models.fields.IntegerField')(null=True, blank=True)),
             ('title', self.gf('django.db.models.fields.CharField')(max_length=512)),
@@ -18,16 +18,16 @@ class Migration(SchemaMigration):
             ('signature_count', self.gf('django.db.models.fields.IntegerField')(default=0)),
             ('image_url', self.gf('django.db.models.fields.URLField')(max_length=200)),
         ))
-        db.send_create_signal(u'campains', ['Campain'])
+        db.send_create_signal(u'campaigns', ['Campain'])
 
 
     def backwards(self, orm):
         # Deleting model 'Campain'
-        db.delete_table(u'campains_campain')
+        db.delete_table(u'campaigns_campain')
 
 
     models = {
-        u'campains.campain': {
+        u'campaigns.campain': {
             'Meta': {'object_name': 'Campain'},
             'change_id': ('django.db.models.fields.IntegerField', [], {'null': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -39,4 +39,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['campains']
+    complete_apps = ['campaigns']
