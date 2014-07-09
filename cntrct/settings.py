@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.messages',
     'south',
+    'campains',
 )
 
 MIDDLEWARE_CLASSES = (

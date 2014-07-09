@@ -2,22 +2,25 @@
 {% load cms_tags %}
 {% load menu_tags %}
 {% block header %}
-<header>
-<div class="navbar">
-<div class="navbar-inner">
+<nav class="navbar" role="navigation">
 <div class="container">
-<div class="header-text" style="float: left; height: 65px;">
-    <a href="/">
-    <img src="http://schoolofdata.org/files/2013/11/logo-white.png">
-    </a>
-<ul>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse"
+data-target="#navbar-collapse" >
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">Stop Secret Contracts</a>
+</div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                          <ul class="nav navbar-nav navbar-right">
 {% show_menu 0 100 0 100 %}
-</ul>
+    </ul>
+    </div>
 </div>
-</div>
-</div>
-</div>
-</header>
+</nav>
 {% endblock %}
 {% block footer %}
 <footer class="footer">
