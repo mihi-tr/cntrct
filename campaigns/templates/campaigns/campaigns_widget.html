@@ -19,8 +19,6 @@ a.btn {
     }
 </style>
 {% endaddtoblock %}
-<div class="container">
-<h2>Support our Campaigns!</h2>
 <div class="campaigns row">
 {% for c in campaigns %}
 <div class="col-md-4">
@@ -44,5 +42,4 @@ a.btn {
         href="?page={{campaigns.next_page_number}}"
         {% endif %}>Next &rarr;</a></li>
 </ul>
-</div>
 {% endblock %}
