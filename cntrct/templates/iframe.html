@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
+{% load sekizai_tags %}
 {% block base_content %}
+{% addtoblock "css" %}
+<style>
+    html {
+        background-image: none;
+        background-color: transparent;
+</style>
+{% endaddtoblock %}
 {% block "content" %}
 {% endblock %}
 {% endblock %}
