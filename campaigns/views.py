@@ -17,7 +17,7 @@ corg = changeorg.Client(api_key=settings.CHANGEORG_API_KEY,
 
 @xframe_options_exempt
 def campaigns_widget(request):
-    campaigns = Campaign.objects.filter(public=True)
+    campaigns = Campaign.objects.filter(public=True).order_by('-signature_count')
     paginator = Paginator(campaigns, 3)
     page = request.GET.get('page')
     try:
