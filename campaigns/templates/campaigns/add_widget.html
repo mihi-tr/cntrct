@@ -2,7 +2,6 @@
 
 {% block "content" %}
 <form action="" method="POST">
-<h2>Add a Campaign from Change.org</h2>
 {% csrf_token %}
 <span style="color: red">
 {{urlform.url.errors}}
