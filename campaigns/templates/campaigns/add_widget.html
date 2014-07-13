@@ -1,11 +1,16 @@
 {% extends "iframe.html" %}
 
 {% block "content" %}
-<form action="../addfromurl/" method="POST">
+<form action="" method="POST">
 <h2>Add a Campaign from Change.org</h2>
 {% csrf_token %}
+<span style="color: red">
+{{urlform.url.errors}}
+</span>
 <div class="form-group row">
-<label for="id_url" class="col-md-2" style="padding: 10px 30px;">URL on change.org:</label>
+<div class="col-md-2">
+<label for="id_url" style="padding: 10px 30px;">URL on change.org:</label>
+</div>
 <input class="col-md-6" style="padding: 10px 30px" id="id_url" name="url" type="url" placeholder="http://www.change.org/petitions/..."></input>
 <input style="display: inline-block; padding: 11px 30px;" type="Submit" name="Submit" value="Submit">
 </div>
