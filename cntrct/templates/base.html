@@ -5,7 +5,9 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
     rel="stylesheet">
     <link rel="stylesheet" href="//assets.okfn.org/themes/okfn/okf-footer/okf-footer.css"/>
-    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="http://stopsecretcontracts.org/wp-content/themes/secret-contracts/style.css?ver=1.0"
+    />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,10 +28,12 @@ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 {% cms_toolbar %}
 <body class="page okf-panel">
 <div class="light">
+<div class="grey">
 {% block header %}
 {% endblock %}
 {% block base_content %}
 {% endblock %}
+</div>
 </div>
 {% block footer %}
 {% endblock %}
